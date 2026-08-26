@@ -1,0 +1,180 @@
+# Manifeste des capacités — nœud JurisOmegaAI
+# Publié pour le Réseau Oméga. Protocole : .claude/skills/reseau-omega/SKILL.md
+#
+# AVERTISSEMENT D'HONNÊTETÉ (SKILL.md §5) : ce nœud est en AMORÇAGE.
+# Au relevé, le dépôt ne contenait aucun commit. Tout ce qui suit est `planifie` —
+# la structure est posée, la compétence n'est pas encore là. Aucun autre nœud ne doit
+# considérer une capacité de ce manifeste comme mobilisable tant que son `statut` n'a
+# pas changé. Le silence vaut refus.
+#
+# En attendant, la source juridique EFFECTIVE du fondateur reste l'agent
+# `expert-associatif` du nœud swissrescue-omnimed (volet juriste). C'est un doublon
+# assumé et TEMPORAIRE : il se résorbe ici, par rapatriement, dès que ce nœud produit.
+
+manifeste: reseau-omega/1
+noeud: jurisomegaai
+domaine: juridique
+confiance: confidentiel
+skill_maitre: jurisomega-ai
+releve_le: 2026-08-26
+branche_relevee: main
+stade: amorcage
+
+# ─────────────────────────────────────────────────────────────────────
+# Invariants du nœud, opposables à tout appelant
+# ─────────────────────────────────────────────────────────────────────
+invariants_opposables:
+  - Aide à la compréhension du droit, JAMAIS un conseil juridique ni une consultation. Mention obligatoire sur tout livrable sortant.
+  - Secret professionnel — une pièce couverte ne quitte ce nœud qu'en N2, donc jamais sans mandat écrit du fondateur (interdit réseau §3.4).
+  - Zéro fiction juridique — aucune référence d'article, d'arrêt ou de jurisprudence fabriquée. En cas de doute : marquer « à vérifier », ou omettre.
+  - Toute analyse porte une juridiction explicite. Une règle suisse ne se transpose jamais silencieusement à un autre ordre juridique.
+  - Toute analyse porte sa date. Le droit change ; une réponse non datée est inutilisable.
+
+# ─────────────────────────────────────────────────────────────────────
+# CAPACITÉS DÉCLARÉES — toutes `planifie` au relevé
+# ─────────────────────────────────────────────────────────────────────
+competences:
+
+  - id: jurisomega-ai
+    type: skill
+    statut: implemente
+    resume: Skill maître du nœud — identité, invariants, ordre de travail, éthique.
+    donnees: []
+    export: N0
+
+  - id: reseau-omega
+    type: skill
+    statut: implemente
+    resume: Protocole d'intrication inter-projets (ce réseau).
+    donnees: []
+    export: N0
+
+  # ── Domaines de compétence visés ──
+
+  - id: protection-donnees
+    type: skill
+    statut: planifie
+    resume: >
+      nLPD (LPD révisée, en vigueur depuis le 1.9.2023) et RGPD — licéité d'un traitement,
+      base légale, proportionnalité, durée de conservation, droits des personnes,
+      analyse d'impact, transferts hors Suisse/UE.
+    juridictions: [CH, UE]
+    donnees: [reference-juridique]
+    export: N0
+    priorite: 1
+    note_export: >
+      compétence la plus demandée du réseau — les deux autres nœuds l'attendent
+      (OmniMed pour les données de santé, OSINT pour la licéité d'une collecte).
+
+  - id: droit-associations
+    type: skill
+    statut: planifie
+    resume: >
+      Droit suisse des associations (Art. 60 ss CO) — statuts, organes, responsabilité,
+      but non lucratif, dissolution et dévolution des actifs, exonération fiscale.
+    juridictions: [CH]
+    donnees: [reference-juridique]
+    export: N0
+    priorite: 2
+    note_export: rapatrie le volet « juriste » de l'agent expert-associatif d'OmniMed.
+
+  - id: propriete-intellectuelle
+    type: skill
+    statut: planifie
+    resume: Brevets et PCT, droit d'auteur sur le logiciel, marques, licences des corpus et jeux de données.
+    juridictions: [CH, UE, PCT]
+    donnees: [reference-juridique, secret-pro]
+    export: N1
+    priorite: 2
+    note_export: >
+      le contenu d'un dossier PCT en cours est couvert par le secret ET par l'invariant
+      de confidentialité du brevet d'OmniMed. La MÉTHODE traverse en N0 ; le dossier, non.
+
+  - id: droit-sante
+    type: skill
+    statut: planifie
+    resume: >
+      Cadre du dispositif médical et du logiciel de santé, responsabilité, secret médical,
+      statut d'un outil d'aide au raisonnement non diagnostique.
+    juridictions: [CH, UE]
+    donnees: [reference-juridique]
+    export: N0
+    priorite: 1
+    note_export: >
+      qualifie juridiquement la position d'OmniMed — « aide au raisonnement, jamais
+      diagnostic ». C'est l'invariant médical n°6 qui a besoin de son fondement juridique.
+
+  - id: licite-collecte
+    type: skill
+    statut: planifie
+    resume: >
+      Licéité d'une collecte en sources ouvertes — scraping, données personnelles
+      publiquement accessibles, proportionnalité, finalité, conservation, droits des tiers.
+    juridictions: [CH, UE]
+    donnees: [reference-juridique]
+    export: N1
+    priorite: 1
+    note_export: >
+      neurone attendu en priorité haute par le nœud OSINT, qui déclare ne pas pouvoir
+      s'en passer avant de câbler la moindre collecte.
+
+  - id: contrats-partenariats
+    type: skill
+    statut: planifie
+    resume: Conventions institutionnelles (cantons, hôpitaux, centrales 144, CICR/OMS), NDA, prestataires, hébergement.
+    juridictions: [CH]
+    donnees: [reference-juridique, dossier]
+    export: N1
+    priorite: 3
+
+  - id: force-probante
+    type: skill
+    statut: planifie
+    resume: >
+      Qualification de la force probante d'une pièce — nature de la source, chaîne de
+      conservation, horodatage, recevabilité.
+    juridictions: [CH]
+    donnees: [reference-juridique]
+    export: N0
+    priorite: 3
+    note_export: >
+      à bâtir en reprenant le `modele-confiance` du nœud OSINT (échelle LOW→VERY_HIGH,
+      typage primary/secondary/community) plutôt qu'en repartant de zéro — interdit §3.7.
+
+# ─────────────────────────────────────────────────────────────────────
+# Offres et besoins
+# ─────────────────────────────────────────────────────────────────────
+offres:
+  reserve: >
+    AUCUNE offre n'est mobilisable au relevé — toutes les compétences sont `planifie`.
+    Les lignes ci-dessous sont un engagement de construction, pas une disponibilité.
+  engagements:
+    - competence: protection-donnees
+      pour: [swissrescue-omnimed, osint-omega-ai]
+      niveau: N0
+    - competence: licite-collecte
+      pour: [osint-omega-ai]
+      niveau: N1
+    - competence: droit-sante
+      pour: [swissrescue-omnimed]
+      niveau: N0
+    - competence: droit-associations
+      pour: [swissrescue-omnimed]
+      niveau: N0
+
+besoins:
+  - vers: swissrescue-omnimed
+    niveau: N0
+    objet: >
+      patron d'organigramme multi-agents (entreprise-omnimed), méthode de sourçage
+      unitaire (veille-medicale) appliquée aux sources du droit, posture de
+      contre-vérification adversaire (analyste-qualite), et décodage de l'intention
+      du fondateur (methode-fondateur).
+    criticite: haute
+    note: >
+      ce nœud démarre vide ; il n'a aucune raison de réinventer une structure qui
+      fonctionne déjà à côté. Emprunter d'abord, diverger ensuite si nécessaire.
+  - vers: osint-omega-ai
+    niveau: N0
+    objet: modèle entité / trouvaille / chronologie et échelle de confiance (modele-confiance).
+    note: transposable tel quel au dossier juridique — parties, pièces, chronologie procédurale.

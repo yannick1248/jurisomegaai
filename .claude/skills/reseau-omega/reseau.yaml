@@ -1,0 +1,90 @@
+# Réseau Oméga — registre des nœuds et matrice de bac à sable.
+# Fichier IDENTIQUE dans les trois dépôts. Toute modification se propage aux trois
+# (loi de concaténation : on ajoute, on ne réécrit pas ; jamais deux versions vivantes).
+# Protocole : .claude/skills/reseau-omega/SKILL.md
+
+reseau: reseau-omega/1
+
+noeuds:
+  - id: swissrescue-omnimed
+    nom: SwissRescue OmniMed
+    depot: yannick1248/swissrescue-omnimed
+    branche_source: srom/perf-gel-modules   # main est figée depuis 2026-05 ; gh-pages est un artefact de publication
+    domaine: medical
+    confiance: confidentiel
+    skill_maitre: swissrescue-omnimed
+    manifeste: .claude/skills/reseau-omega/capacites.yaml
+    classes_donnees: [phi, clinique, geo, media, reference]
+
+  - id: jurisomegaai
+    nom: JurisOmegaAI
+    depot: yannick1248/jurisomegaai
+    branche_source: main
+    domaine: juridique
+    confiance: confidentiel
+    skill_maitre: jurisomega-ai
+    manifeste: .claude/skills/reseau-omega/capacites.yaml
+    classes_donnees: [secret-pro, dossier, reference-juridique]
+
+  - id: osint-omega-ai
+    nom: OSINT Oméga AI
+    depot: yannick1248/osint-omega-ai
+    branche_source: main
+    domaine: renseignement
+    confiance: restreint
+    skill_maitre: osint-omega-ai
+    manifeste: .claude/skills/reseau-omega/capacites.yaml
+    classes_donnees: [source-ouverte, donnee-personnelle-collectee, reference]
+
+# Niveau MAXIMAL autorisé par couple (appelant -> appelé).
+# N0 = la méthode traverse, jamais la donnée · N1 = extrait pseudonymisé
+# N2 = donnée brute, jamais par défaut : mandat écrit et daté du fondateur, par tâche.
+matrice:
+  swissrescue-omnimed:
+    jurisomegaai: N1
+    osint-omega-ai: N0        # interdit 3.1 — aucune donnée de santé vers le renseignement
+  jurisomegaai:
+    swissrescue-omnimed: N1
+    osint-omega-ai: N1
+  osint-omega-ai:
+    swissrescue-omnimed: N0
+    jurisomegaai: N1
+
+# Rappel exécutable des interdits (le texte qui fait foi est au §3 du SKILL.md).
+interdits:
+  - id: 1
+    regle: aucune donnee `phi` ne quitte le noeud medical ; vers osint-omega-ai, N0 strict
+  - id: 2
+    regle: aucune capacite offensive ; osint reste sources ouvertes et defensif
+  - id: 3
+    regle: un resultat osint n'alimente jamais un raisonnement diagnostique (`non-clinique`)
+  - id: 4
+    regle: le secret professionnel ne traverse qu'en N2, donc jamais sans mandat ecrit
+  - id: 5
+    regle: non-propagation d'erreur — un avis externe est une hypothese jusqu'a verification locale
+  - id: 6
+    regle: zero agression — aucun noeud n'ecrit dans le depot d'un autre (lecture seule)
+  - id: 7
+    regle: zero doublon — une competence a un seul domicile ; on l'appelle, on ne la recopie pas
+  - id: 8
+    regle: tout franchissement se journalise dans docs/reseau/JOURNAL_RESEAU.md du noeud appelant
+
+ponts:
+  N0:
+    nom: pont de lecture
+    disponible: true
+    mecanisme: >
+      lecture directe du manifeste et des SKILL.md du noeud vise, si le perimetre GitHub
+      de la session couvre son depot ; la methode s'applique ensuite CHEZ SOI.
+  N1:
+    nom: pont d'enveloppes
+    disponible: true
+    asynchrone: true
+    mecanisme: >
+      l'appelant ecrit docs/reseau/appels/<horodatage>-<noeud>.md ; une session ouverte
+      sur le noeud cible repond dans docs/reseau/reponses/ de SON depot. Aucun appel direct.
+  N2:
+    nom: delegation complete
+    disponible: false
+    mecanisme: >
+      ouvert ponctuellement, par mandat ecrit et date du fondateur, pour une tache donnee.
