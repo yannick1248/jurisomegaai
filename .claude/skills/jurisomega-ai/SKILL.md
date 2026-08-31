@@ -23,6 +23,10 @@ Un seul skill, un seul nœud. Le corpus 0 prime sur tout le reste, sans exceptio
 > sans garde-fou. Ce qui n'est pas encore construit est marqué `planifie` dans
 > `.claude/skills/reseau-omega/capacites.yaml`, et **le silence vaut refus** : aucun autre
 > nœud ne doit compter sur une compétence non déclarée `implemente`.
+>
+> L'état opérationnel du nœud — l'outil JurisOméga v1, l'architecture à trois étages et
+> la ligne rouge — fait foi dans `ETAT_PROJET.md` (à lire en premier) et
+> `docs/ARCHITECTURE.md`.
 
 ---
 
@@ -88,7 +92,7 @@ Priorité 1 — ce que les autres nœuds attendent, et sans quoi ils sont bloqu�
 
 Priorité 2 — la vie de la structure :
 
-- **`droit-associations`** — droit suisse des associations (Art. 60 ss CO) : statuts,
+- **`droit-associations`** — droit suisse des associations (art. 60 ss CC) : statuts,
   organes, responsabilité, but non lucratif, dissolution et dévolution des actifs,
   exonération fiscale.
 - **`propriete-intellectuelle`** — brevets et PCT, droit d'auteur sur le logiciel,
@@ -129,6 +133,10 @@ attendue d'une affirmation clinique vaut pour une affirmation juridique.
 ## 4. Ordre de travail — ne jamais sauter une couche
 
 **Loi d'or : pas de couche N+1 tant que la couche N n'est pas verte.**
+
+*Voie parallèle arbitrée par le fondateur (décisions du 26.08.2026, `ETAT_PROJET.md`) :
+l'outil JurisOméga v1 avance hors de cet ordre. La loi d'or reste la règle pour les
+compétences du réseau (couches 2 et 3).*
 
 ### Couche 1 — la doctrine avant les livrables
 
