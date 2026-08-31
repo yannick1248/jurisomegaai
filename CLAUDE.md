@@ -13,6 +13,14 @@ domicile unique de la compétence juridique, appelée par les deux autres nœuds
 **Stade : amorçage.** Le dépôt démarre vide. La doctrine est posée avant les livrables,
 volontairement.
 
+**JurisOméga v1** — l'outil du nœud (délais + rappels et analyse de dossier, interne aux
+fondateurs) a été décidé, construit et prouvé **hors de ce dépôt** le 26.08.2026. L'état
+qui fait foi est `ETAT_PROJET.md` (à lire en premier) ; l'architecture est
+`docs/ARCHITECTURE.md`. **Ligne rouge (§0), jamais franchie** : aucun dossier privé d'un
+fondateur, d'un organe ou d'un proche ne touche l'infrastructure de l'association —
+`/juris` ne reçoit que des dossiers de bénéficiaires accompagnés par l'association ; les
+dossiers propres du titulaire vivent sur l'instance privée, hors périmètre associatif.
+
 ## RÈGLES INALIÉNABLES (jamais contredites)
 
 1. **Aide à la compréhension du droit, JAMAIS un conseil juridique.** Ce projet n'est ni
@@ -32,6 +40,10 @@ volontairement.
 ## ORDRE DE TRAVAIL — 4 COUCHES (ne jamais sauter)
 
 **Loi d'or : pas de couche N+1 tant que la couche N n'est pas verte.**
+
+*Voie parallèle arbitrée par le fondateur (décisions du 26.08.2026, `ETAT_PROJET.md`) :
+l'outil JurisOméga v1 avance hors de cet ordre. La loi d'or reste la règle pour les
+compétences du réseau (couches 2 et 3).*
 
 1. **Doctrine** — skill maître, manifeste de capacités, protocole réseau, ce fichier. *Fait.*
 2. **Compétences de priorité 1** — `protection-donnees` (nLPD/RGPD), puis

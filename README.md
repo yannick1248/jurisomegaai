@@ -15,6 +15,11 @@ L'état réel de chaque compétence est déclaré dans
 [`.claude/skills/reseau-omega/capacites.yaml`](.claude/skills/reseau-omega/capacites.yaml) —
 `planifie` tant qu'elle n'existe pas. **Le silence vaut refus.**
 
+L'état opérationnel courant — l'outil **JurisOméga v1** (délais + analyse de dossier),
+l'architecture à trois étages et la ligne rouge — est tenu dans
+[`ETAT_PROJET.md`](ETAT_PROJET.md), à lire en premier ; l'architecture de référence est
+[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
 ## Pourquoi ce dépôt existe
 
 Le besoin juridique naissait dans les trois projets du fondateur et était traité au coup
@@ -31,7 +36,7 @@ Ici, elle a un seul domicile. Les autres nœuds l'appellent.
 | `protection-donnees` | nLPD (rév. 1.9.2023) et RGPD — licéité, base légale, conservation, droits | 1 |
 | `licite-collecte` | licéité d'une collecte en sources ouvertes (scraping, proportionnalité) | 1 |
 | `droit-sante` | logiciel de santé, responsabilité, statut d'un outil non diagnostique | 1 |
-| `droit-associations` | droit suisse des associations (Art. 60 ss CO) | 2 |
+| `droit-associations` | droit suisse des associations (art. 60 ss CC) | 2 |
 | `propriete-intellectuelle` | brevets et PCT, droit d'auteur logiciel, marques, licences | 2 |
 | `contrats-partenariats` | conventions institutionnelles, NDA, prestataires, hébergement | 3 |
 | `force-probante` | qualification de la force probante d'une pièce | 3 |
@@ -58,7 +63,9 @@ N1 passe par des enveloppes écrites sous `docs/reseau/`.
 ## Structure
 
 ```
+ETAT_PROJET.md                   fichier de continuité — état, décisions, ligne rouge
 .claude/skills/jurisomega-ai/    skill maître — doctrine, invariants, ordre de travail
 .claude/skills/reseau-omega/     protocole inter-projets + manifeste de capacités
+docs/ARCHITECTURE.md             architecture JurisOméga — trois étages, §0 ligne rouge
 docs/reseau/                     enveloppes d'appel, réponses, journal des franchissements
 ```
