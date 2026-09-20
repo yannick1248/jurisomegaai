@@ -168,13 +168,21 @@ besoins:
     objet: >
       patron d'organigramme multi-agents (entreprise-omnimed), méthode de sourçage
       unitaire (veille-medicale) appliquée aux sources du droit, posture de
-      contre-vérification adversaire (analyste-qualite), et décodage de l'intention
-      du fondateur (methode-fondateur).
+      contre-vérification adversaire (retrospective-omnimed — corrigé le 2026-09-20 :
+      `analyste-qualite` n'existe pas comme id chez eux, voir leur capacites.yaml), et
+      décodage de l'intention du fondateur (methode-fondateur).
     criticite: haute
     note: >
       ce nœud démarre vide ; il n'a aucune raison de réinventer une structure qui
       fonctionne déjà à côté. Emprunter d'abord, diverger ensuite si nécessaire.
+      swissrescue-omnimed a publié son propre capacites.yaml le 2026-09-20 : les quatre
+      offres ci-dessus y sont déclarées `implemente`, export N0 — mobilisables.
   - vers: osint-omega-ai
     niveau: N0
     objet: modèle entité / trouvaille / chronologie et échelle de confiance (modele-confiance).
-    note: transposable tel quel au dossier juridique — parties, pièces, chronologie procédurale.
+    note: >
+      transposable tel quel au dossier juridique — parties, pièces, chronologie
+      procédurale. osint-omega-ai a publié son capacites.yaml le 2026-09-20 : l'id réel
+      est `modele-domaine-osint` (Entity/Finding, LOW→VERY_HIGH, primary/secondary/
+      community), déclaré `implemente`, export N0 — mobilisable dès aujourd'hui pour
+      bâtir `force-probante`.
