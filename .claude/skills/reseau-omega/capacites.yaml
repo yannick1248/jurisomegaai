@@ -49,6 +49,13 @@ competences:
     donnees: []
     export: N0
 
+  - id: meta-prompt
+    type: skill
+    statut: implemente
+    resume: Chargeur/routeur de toutes les compétences du nœud, avec débordement borné vers les autres nœuds.
+    donnees: []
+    export: N0
+
   # ── Domaines de compétence visés ──
 
   - id: protection-donnees
