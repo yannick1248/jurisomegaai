@@ -88,7 +88,7 @@ Priorité 1 — ce que les autres nœuds attendent, et sans quoi ils sont bloqu�
 
 Priorité 2 — la vie de la structure :
 
-- **`droit-associations`** — droit suisse des associations (Art. 60 ss CO) : statuts,
+- **`droit-associations`** — droit suisse des associations (Art. 60 ss CC) : statuts,
   organes, responsabilité, but non lucratif, dissolution et dévolution des actifs,
   exonération fiscale.
 - **`propriete-intellectuelle`** — brevets et PCT, droit d'auteur sur le logiciel,

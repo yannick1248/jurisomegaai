@@ -31,7 +31,7 @@ Ici, elle a un seul domicile. Les autres nœuds l'appellent.
 | `protection-donnees` | nLPD (rév. 1.9.2023) et RGPD — licéité, base légale, conservation, droits | 1 |
 | `licite-collecte` | licéité d'une collecte en sources ouvertes (scraping, proportionnalité) | 1 |
 | `droit-sante` | logiciel de santé, responsabilité, statut d'un outil non diagnostique | 1 |
-| `droit-associations` | droit suisse des associations (Art. 60 ss CO) | 2 |
+| `droit-associations` | droit suisse des associations (Art. 60 ss CC) | 2 |
 | `propriete-intellectuelle` | brevets et PCT, droit d'auteur logiciel, marques, licences | 2 |
 | `contrats-partenariats` | conventions institutionnelles, NDA, prestataires, hébergement | 3 |
 | `force-probante` | qualification de la force probante d'une pièce | 3 |
