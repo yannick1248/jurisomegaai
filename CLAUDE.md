@@ -57,6 +57,7 @@ Ce dépôt est un nœud d'un réseau de trois. Protocole :
   une capacité sans l'avoir exercée.
 - **Une compétence déclarée `planifie` n'est pas appelable.** Le silence vaut refus.
 - **Zéro agression** — ce nœud n'écrit jamais dans le dépôt d'un autre.
+- Point d'entrée méta : `.claude/skills/meta-competences-juridique/SKILL.md` (route selon les statuts réels).
 - Tout franchissement se journalise dans `docs/reseau/JOURNAL_RESEAU.md`.
 
 ## ÉTAT DE LA DETTE
