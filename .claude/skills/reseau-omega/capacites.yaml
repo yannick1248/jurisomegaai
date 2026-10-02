@@ -49,6 +49,13 @@ competences:
     donnees: []
     export: N0
 
+  - id: meta-competences-juris
+    type: skill
+    statut: implemente
+    resume: Méta-skill du nœud — carte des compétences réelles, appel inter-projets sous bac à sable.
+    donnees: []
+    export: N0
+
   # ── Domaines de compétence visés ──
 
   - id: protection-donnees
