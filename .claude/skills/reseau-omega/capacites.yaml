@@ -16,7 +16,7 @@ noeud: jurisomegaai
 domaine: juridique
 confiance: confidentiel
 skill_maitre: jurisomega-ai
-releve_le: 2026-08-26
+releve_le: 2026-10-07 # nœud OSINT relevé : modele-confiance implémenté ; nœud médical : skills hors dépôt (partiel)
 branche_relevee: main
 stade: amorcage
 

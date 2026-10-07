@@ -209,3 +209,29 @@ Trois règles, non négociables :
 - Il ne remplace pas les skills maîtres (`swissrescue-omnimed`, `jurisomega-ai`,
   `osint-omega-ai`) : il s'y subordonne. En cas de contradiction, **le skill maître du
   nœud courant l'emporte**, et le désaccord se journalise.
+
+---
+
+## 8. Un méta-skill par nœud — le point d'entrée du réseau
+
+Chaque nœud a **un seul** skill d'entrée (le « méta-prompt ») qui recense **toutes** ses
+compétences réelles, dit quand les réveiller, et renvoie vers ce protocole dès qu'une tâche
+déborde. C'est lui que la session charge en premier ; il ne réécrit rien, il **route**.
+
+| Nœud | Skill d'entrée | Où il vit |
+|---|---|---|
+| OmniMed | `meta-competences-swissrescue` | `swissrescue-omnimed/.claude/skills/` |
+| JurisOmega | `jurisomega-ai` (maître = méta) | `jurisomegaai/.claude/skills/` |
+| OSINT Oméga | `osint-omega-ai` (maître = méta) | `osint-omega-ai/.claude/skills/` |
+
+Contrat commun d'un méta-skill :
+
+1. **Carte vérifiée** — il ne liste que ce qui existe dans le dépôt (skill, agent, module) ;
+   une doctrine n'est pas un skill, un projet de skill n'est pas un skill.
+2. **Miroir du manifeste** — sa carte et `capacites.yaml` disent la même chose ; en cas
+   d'écart, le manifeste fait foi et l'écart se corrige le jour même.
+3. **Sas réseau** — toute compétence externe passe par §6 (cinq temps) et la matrice §3.
+4. **Bac à sable explicite** — il rappelle les interdits propres à son nœud, opposables
+   à tout appelant (champ `invariants_opposables` du manifeste).
+5. **Patron réplicable** — un nouveau projet du fondateur reçoit : un méta-skill, un
+   manifeste, un journal. Rien d'autre n'est requis pour entrer dans le réseau.

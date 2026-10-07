@@ -176,3 +176,17 @@ des trois projets.
 Protocole complet, niveaux de bac à sable et ponts réellement atteignables :
 `.claude/skills/reseau-omega/SKILL.md`. En cas de contradiction entre ce skill maître et
 le protocole réseau, **ce skill maître l'emporte** chez lui, et le désaccord se journalise.
+
+---
+
+## Méta-prompt — ce skill est aussi l'entrée du réseau
+
+Ce skill maître joue, pour le nœud juridique, le rôle de méta-skill (contrat :
+`reseau-omega` §8). Carte des compétences au relevé du 2026-10-07 : **réelles** —
+`jurisomega-ai`, `reseau-omega` ; **planifiées, donc non appelables** — `protection-donnees`,
+`droit-associations`, `propriete-intellectuelle`, `droit-sante`, `licite-collecte`,
+`contrats-partenariats`, `force-probante`. Le manifeste `capacites.yaml` fait foi.
+
+Appels sortants utiles : `modele-confiance` (OSINT, N0 — livré) pour structurer parties,
+pièces et chronologie ; méthode de qualité/contre-vérification d'OmniMed (N0, non versionnée
+hors compte → à demander au fondateur). Le secret professionnel ne traverse jamais.
