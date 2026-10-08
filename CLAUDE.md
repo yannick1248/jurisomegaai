@@ -65,3 +65,7 @@ Tout est `planifie` sauf la doctrine. Le manifeste
 `.claude/skills/reseau-omega/capacites.yaml` fait foi — **le lire avant d'annoncer quoi
 que ce soit au fondateur, et le mettre à jour dès qu'une compétence est livrée.** Une
 compétence livrée mais non déclarée n'existe pas pour le réseau.
+
+## MÉTA-SKILL
+Point d'entrée de session : `.claude/skills/meta-competences-juridique/SKILL.md` — inventaire
+des compétences et routage vers les autres nœuds, sous bac à sable.
